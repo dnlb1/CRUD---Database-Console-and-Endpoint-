@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UHPYQ8_HFT_2021222.Reposito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UHPYQ8_HFT_2021222.Endpoint", "UHPYQ8_HFT_2021222.Endpoint\UHPYQ8_HFT_2021222.Endpoint.csproj", "{26FCFDEC-6578-423D-AF2A-B115220287A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UHPYQ8_HFT_2021222.Test", "UHPYQ8_HFT_2021222.Test\UHPYQ8_HFT_2021222.Test.csproj", "{AA7D5997-24D8-4BED-8426-7E85E64AD4BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{26FCFDEC-6578-423D-AF2A-B115220287A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26FCFDEC-6578-423D-AF2A-B115220287A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26FCFDEC-6578-423D-AF2A-B115220287A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7D5997-24D8-4BED-8426-7E85E64AD4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7D5997-24D8-4BED-8426-7E85E64AD4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7D5997-24D8-4BED-8426-7E85E64AD4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7D5997-24D8-4BED-8426-7E85E64AD4BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
