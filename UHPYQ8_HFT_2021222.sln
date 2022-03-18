@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UHPYQ8_HFT_2021222.Models",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UHPYQ8_HFT_2021222.Logic", "UHPYQ8_HFT_2021222.Logic\UHPYQ8_HFT_2021222.Logic.csproj", "{218DEFA5-3403-4B13-9373-803A95E2B32E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UHPYQ8_HFT_2021222.Repository", "UHPYQ8_HFT_2021222.Repository\UHPYQ8_HFT_2021222.Repository.csproj", "{AD4C45A2-EE19-45E9-BBC2-74EBC923AB7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{218DEFA5-3403-4B13-9373-803A95E2B32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{218DEFA5-3403-4B13-9373-803A95E2B32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{218DEFA5-3403-4B13-9373-803A95E2B32E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD4C45A2-EE19-45E9-BBC2-74EBC923AB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD4C45A2-EE19-45E9-BBC2-74EBC923AB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD4C45A2-EE19-45E9-BBC2-74EBC923AB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD4C45A2-EE19-45E9-BBC2-74EBC923AB7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
