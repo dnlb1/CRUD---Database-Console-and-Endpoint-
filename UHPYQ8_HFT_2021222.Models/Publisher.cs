@@ -22,7 +22,7 @@ namespace UHPYQ8_HFT_2021222.Models
 
         public Publisher()
         {
-            Games = new HashSet<Game>();
+            
         }
 
         public Publisher(string line)
@@ -30,7 +30,6 @@ namespace UHPYQ8_HFT_2021222.Models
             string[] split = line.Split('#');
             PublisherId = int.Parse(split[0]);
             PublisherName = split[1];
-            Games = new HashSet<Game>();
         }
     }
 }
