@@ -15,6 +15,13 @@ namespace UHPYQ8_HFT_2021222.Repository
             this.Database.EnsureCreated();
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseInMemoryDatabase("game").UseLazyLoadingProxies();
+            }
+        }
 
     }
 }
