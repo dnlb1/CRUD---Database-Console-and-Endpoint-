@@ -23,5 +23,21 @@ namespace UHPYQ8_HFT_2021222.Repository
             }
         }
 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Game>(Game => Game
+            .HasOne(Game => Game.Publisher)
+            .WithMany(Publisher => Publisher.Games)
+            .HasForeignKey(Game => Game.PublisherId)
+            .OnDelete(DeleteBehavior.Cascade));
+
+            modelBuilder.Entity<Game>(Game => Game
+            .HasOne(Game => Game.Platform)
+            .WithMany(Platform => Platform.Games)
+            .HasForeignKey(Game => Game.PlatformId)
+            .OnDelete(DeleteBehavior.Cascade));
+
+        }
     }
 }
