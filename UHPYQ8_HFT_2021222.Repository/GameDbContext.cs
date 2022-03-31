@@ -10,6 +10,8 @@ namespace UHPYQ8_HFT_2021222.Repository
         public DbSet<Platform> Platforms { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
 
+        public DbSet<Game_publisher> Game_Publishers { get; set; }
+
         public GameDbContext()
         {
             this.Database.EnsureCreated();
@@ -27,16 +29,21 @@ namespace UHPYQ8_HFT_2021222.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Game>(Game => Game
-            .HasOne(Game => Game.Publisher)
-            .WithMany(Publisher => Publisher.Games)
-            .HasForeignKey(Game => Game.PublisherId)
-            .OnDelete(DeleteBehavior.Cascade));
-
-            modelBuilder.Entity<Game>(Game => Game
             .HasOne(Game => Game.Platform)
             .WithMany(Platform => Platform.Games)
             .HasForeignKey(Game => Game.PlatformId)
-            .OnDelete(DeleteBehavior.Cascade));
+            .OnDelete(DeleteBehavior.Cascade)
+            );
+
+            modelBuilder.Entity<Publisher>()
+                .HasMany(x => x.Games)
+                .WithMany(x => x.Publishers)
+                .UsingEntity<Game_publisher>(
+                x => x.HasOne(x => x.Game)
+                .WithMany()
+                .HasForeignKey(x => x.GameId).OnDelete(DeleteBehavior.Cascade),
+                x => x.HasOne(x => x.Publisher)
+                .WithMany().HasForeignKey(x => x.PublisherId).OnDelete(DeleteBehavior.Cascade));
 
             modelBuilder.Entity<Game>().HasData(new Game[]
          {
