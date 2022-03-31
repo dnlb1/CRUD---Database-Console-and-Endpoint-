@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -19,12 +20,11 @@ namespace UHPYQ8_HFT_2021222.Models
         [Range(0, 10)]
         public double Rating { get; set; }
 
-        public int PublisherId { get; set; }
-
-        public virtual Publisher Publisher { get; set; }
 
         public int PlatformId { get; set; }
         public virtual Platform Platform { get; set; }
+
+        public virtual ICollection<Publisher> Publishers { get; set; }
 
         public Game()
         {
@@ -37,9 +37,8 @@ namespace UHPYQ8_HFT_2021222.Models
             GameId = int.Parse(split[0]);
             Title = split[1];
             Price = double.Parse(split[2]);
-            PublisherId = int.Parse(split[3]);
-            Rating = double.Parse(split[4]);
-            PlatformId = int.Parse(split[5]);
+            Rating = double.Parse(split[3]);
+            PlatformId = int.Parse(split[4]);
         }
 
     }
