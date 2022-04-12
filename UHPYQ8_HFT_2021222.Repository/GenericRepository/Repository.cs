@@ -31,7 +31,7 @@ namespace UHPYQ8_HFT_2021222.Repository.GenericRepository
 
         public IQueryable<T> ReadAll()
         {
-            throw new NotImplementedException();
+            return ctx.Set<T>();
         }
 
         public void Update(T item)
