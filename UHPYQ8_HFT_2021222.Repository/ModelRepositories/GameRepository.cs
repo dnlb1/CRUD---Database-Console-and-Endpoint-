@@ -17,7 +17,7 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 
         public override Game Read(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Games.FirstOrDefault(t => t.GameId == id);
         }
 
         public override void Update(Game item)
