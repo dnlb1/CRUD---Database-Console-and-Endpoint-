@@ -11,6 +11,14 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 {
     public class GameRepository : Repository<Game>, IRepository<Game>
     {
+        public override Game Read(int id)
+        {
+            throw new NotImplementedException();
+        }
 
+        public override void Update(Game item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
