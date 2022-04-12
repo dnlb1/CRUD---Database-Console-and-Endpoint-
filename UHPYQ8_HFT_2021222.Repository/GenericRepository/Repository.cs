@@ -23,7 +23,8 @@ namespace UHPYQ8_HFT_2021222.Repository.GenericRepository
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            ctx.Set<T>().Remove(Read(id));
+            ctx.SaveChanges();
         }
 
         public T Read(int id)
