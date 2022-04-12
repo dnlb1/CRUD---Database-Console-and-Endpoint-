@@ -17,7 +17,8 @@ namespace UHPYQ8_HFT_2021222.Repository.GenericRepository
         }
         public void Create(T item)
         {
-            throw new NotImplementedException();
+            ctx.Set<T>().Add(item);
+            ctx.SaveChanges();
         }
 
         public void Delete(int id)
