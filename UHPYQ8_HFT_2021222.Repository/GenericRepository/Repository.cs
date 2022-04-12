@@ -34,9 +34,6 @@ namespace UHPYQ8_HFT_2021222.Repository.GenericRepository
             return ctx.Set<T>();
         }
 
-        public void Update(T item)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Update(T item);
     }
 }
