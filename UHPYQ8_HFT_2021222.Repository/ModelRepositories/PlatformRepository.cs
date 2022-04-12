@@ -11,5 +11,14 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 {
     public class PlatformRepository : Repository<Platform>, IRepository<Platform>
     {
+        public override Platform Read(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Update(Platform item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
