@@ -22,7 +22,12 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 
         public override void Update(Game_publisher item)
         {
-            throw new NotImplementedException();
+            var old = Read(item.GP_Id);
+            foreach (var prop in old.GetType().GetProperties())
+            {
+                prop.SetValue(old, prop.GetValue(item));
+            }
+            ctx.SaveChanges();
         }
     }
 }
