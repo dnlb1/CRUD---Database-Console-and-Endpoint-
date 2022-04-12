@@ -9,6 +9,12 @@ namespace UHPYQ8_HFT_2021222.Repository.GenericRepository
 {
     public abstract class Repository<T> : IRepository<T> where T : class
     {
+        protected GameDbContext ctx;
+
+        protected Repository(GameDbContext ctx)
+        {
+            this.ctx = ctx;
+        }
         public void Create(T item)
         {
             throw new NotImplementedException();
