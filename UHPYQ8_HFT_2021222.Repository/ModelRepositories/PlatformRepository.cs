@@ -11,6 +11,10 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 {
     public class PlatformRepository : Repository<Platform>, IRepository<Platform>
     {
+        public PlatformRepository(GameDbContext ctx) : base(ctx)
+        {
+        }
+
         public override Platform Read(int id)
         {
             throw new NotImplementedException();
