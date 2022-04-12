@@ -11,6 +11,10 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 {
     public class PublisherRepository : Repository<Publisher>, IRepository<Publisher>
     {
+        public PublisherRepository(GameDbContext ctx) : base(ctx)
+        {
+        }
+
         public override Publisher Read(int id)
         {
             throw new NotImplementedException();
