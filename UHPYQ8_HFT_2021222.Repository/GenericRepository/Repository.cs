@@ -27,10 +27,7 @@ namespace UHPYQ8_HFT_2021222.Repository.GenericRepository
             ctx.SaveChanges();
         }
 
-        public T Read(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract T Read(int id);
 
         public IQueryable<T> ReadAll()
         {
