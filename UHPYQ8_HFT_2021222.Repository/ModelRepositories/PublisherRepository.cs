@@ -22,7 +22,12 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 
         public override void Update(Publisher item)
         {
-            throw new NotImplementedException();
+            var old = Read(item.PublisherId);
+            foreach (var prop in old.GetType().GetProperties())
+            {
+                prop.SetValue(old, prop.GetValue(item));
+            }
+            ctx.SaveChanges();
         }
     }
 }
