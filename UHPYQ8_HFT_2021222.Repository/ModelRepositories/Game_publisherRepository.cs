@@ -17,7 +17,7 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 
         public override Game_publisher Read(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Game_Publishers.FirstOrDefault(t => t.GP_Id == id);
         }
 
         public override void Update(Game_publisher item)
