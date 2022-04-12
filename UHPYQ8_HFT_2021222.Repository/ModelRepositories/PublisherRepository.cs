@@ -17,7 +17,7 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 
         public override Publisher Read(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Publishers.FirstOrDefault(t => t.PublisherId == id);
         }
 
         public override void Update(Publisher item)
