@@ -19,8 +19,4 @@
     <ProjectReference Include="..\UHPYQ8_HFT_2021222.Models\UHPYQ8_HFT_2021222.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ModelRepositories\" />
-  </ItemGroup>
-
 </Project>
