@@ -17,7 +17,7 @@ namespace UHPYQ8_HFT_2021222.Repository.ModelRepositories
 
         public override Platform Read(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Platforms.FirstOrDefault(t => t.PlatformId == id);
         }
 
         public override void Update(Platform item)
