@@ -112,5 +112,13 @@ namespace UHPYQ8_HFT_2021222.Test
             //(1 + 1 + 1)/3 = 1 
             Assert.That(result, Is.EqualTo(1));
         }
+        //Free 2.
+        [Test]
+        public void GameAVGRatingTest()
+        {
+            //(3+3+3)/3 = 3
+            var result = gameLogic.GameAVGRating();
+            Assert.That(result, Is.EqualTo(3));
+        }
     }
 }
