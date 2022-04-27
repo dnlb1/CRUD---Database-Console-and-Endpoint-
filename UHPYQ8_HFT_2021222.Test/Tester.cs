@@ -278,5 +278,26 @@ namespace UHPYQ8_HFT_2021222.Test
             var re = gameLogic.PlatformICMoney().ToList();
             Assert.AreEqual(ex, re);
         }
+
+        //Noncurd 5.
+        [Test]
+        public void FindAllGameAtThisPlatformTest()
+        {
+            Platform fakePlatform2 = new Platform("2#XBOX");
+            List<Game> ex = new List<Game>()
+            {
+                 new Game()
+                {
+                    GameId = 2,
+                    Platform = fakePlatform2,
+                    PlatformId = 2, //xbox
+                    Price = 1,
+                    Rating = 3,
+                    Title = "Lego Batman"
+                }
+            };
+            var re = gameLogic.FindAllGameAtThisPlatform("XBOX").ToList();
+            Assert.AreEqual(ex, re);
+        }
     }
 }
