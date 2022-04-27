@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace UHPYQ8_HFT_2021222.Models
@@ -14,7 +15,7 @@ namespace UHPYQ8_HFT_2021222.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PlatformId { get; set; }
         public string PlatformName { get; set; }
-
+        [JsonIgnore]
         public virtual ICollection<Game> Games { get; set; }
 
         public Platform()
