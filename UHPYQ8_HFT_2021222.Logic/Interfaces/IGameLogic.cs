@@ -2,7 +2,7 @@
 using System.Linq;
 using UHPYQ8_HFT_2021222.Models;
 
-namespace UHPYQ8_HFT_2021222.Logic.Interfaces
+namespace UHPYQ8_HFT_2021222.Logic.Classes
 {
     public interface IGameLogic
     {
