@@ -4,7 +4,7 @@
         "windowsAuthentication": false,
         "anonymousAuthentication": true,
         "iisExpress": {
-            "applicationUrl": "http://localhost:13610",
+            "applicationUrl": "http://localhost:51783",
             "sslPort": 0
         }
     },
@@ -17,7 +17,7 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
             }
         },
-        "Proba": {
+        "UHPYQ8_HFT_2021222.Endpoint": {
             "commandName": "Project",
             "dotnetRunMessages": "true",
             "launchBrowser": true,
