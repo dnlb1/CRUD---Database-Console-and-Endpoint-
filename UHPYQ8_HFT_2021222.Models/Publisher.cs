@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace UHPYQ8_HFT_2021222.Models
@@ -17,8 +18,9 @@ namespace UHPYQ8_HFT_2021222.Models
         [Required]
         [StringLength(240)]
         public string PublisherName { get; set; }
-
+        [JsonIgnore]
         public virtual ICollection<Game> Games { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Game_publisher> Game_publishers { get; set; }
         public Publisher()
         {
