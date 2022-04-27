@@ -147,5 +147,21 @@ namespace UHPYQ8_HFT_2021222.Test
             gameLogic.Create(Gm);
             mockGameRepo.Verify(r => r.Create(Gm), Times.Once);
         }
+
+        //3. Platform's Create method test with Exception
+        [Test]
+        public void CreatePlatformTestWithInCorrectName()
+        {
+            Platform Pl = new Platform();
+            Pl.PlatformName = "1";
+            try
+            {
+                platformLogic.Create(Pl);
+            }
+            catch
+            {
+            }
+            mockPlatformRepo.Verify(r => r.Create(Pl), Times.Never);
+        }
     }
 }
