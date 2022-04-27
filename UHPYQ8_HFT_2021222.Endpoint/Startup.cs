@@ -18,7 +18,7 @@ using UHPYQ8_HFT_2021222.Repository;
 using UHPYQ8_HFT_2021222.Repository.Interface;
 using UHPYQ8_HFT_2021222.Repository.ModelRepositories;
 
-namespace Feleves.Endpoint2
+namespace UHPYQ8_HFT_2021222.Endpoint
 {
     public class Startup
     {
