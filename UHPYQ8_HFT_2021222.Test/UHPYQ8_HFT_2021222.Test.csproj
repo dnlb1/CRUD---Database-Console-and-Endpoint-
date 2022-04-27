@@ -9,5 +9,11 @@
     <ProjectReference Include="..\UHPYQ8_HFT_2021222.Models\UHPYQ8_HFT_2021222.Models.csproj" />
     <ProjectReference Include="..\UHPYQ8_HFT_2021222.Repository\UHPYQ8_HFT_2021222.Repository.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+		<PackageReference Include="Moq" Version="4.16.1" />
+		<PackageReference Include="NUnit" Version="3.13.2" />
+		<PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+	</ItemGroup>
 
 </Project>
