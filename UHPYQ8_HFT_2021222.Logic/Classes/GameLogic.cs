@@ -65,5 +65,12 @@ namespace UHPYQ8_HFT_2021222.Logic.Classes
                    select new KeyValuePair<string, double>
                   (g.Key, g.Average(t => t.Rating));
         }
+        public IEnumerable<KeyValuePair<string, double>> GameCountByPlatform()
+        {
+            return from x in this.repo.ReadAll()
+                   group x by x.Platform.PlatformName into g
+                   select new KeyValuePair<string, double>
+                  (g.Key, g.Count());
+        }
     }
 }
