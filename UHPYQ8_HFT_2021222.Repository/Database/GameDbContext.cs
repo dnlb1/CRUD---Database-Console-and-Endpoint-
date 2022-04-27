@@ -45,6 +45,18 @@ namespace UHPYQ8_HFT_2021222.Repository
                 x => x.HasOne(x => x.Publisher)
                 .WithMany().HasForeignKey(x => x.PublisherId).OnDelete(DeleteBehavior.Cascade));
 
+            modelBuilder.Entity<Game_publisher>()
+               .HasOne(r => r.Publisher)
+               .WithMany(actor => actor.Game_publishers)
+               .HasForeignKey(r => r.PublisherId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Game_publisher>()
+                .HasOne(r => r.Game)
+                .WithMany(movie => movie.Game_publishers)
+                .HasForeignKey(r => r.GameId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<Game>().HasData(new Game[]
          {
                 new Game("1#Elden Ring#50#7,9#1"),
