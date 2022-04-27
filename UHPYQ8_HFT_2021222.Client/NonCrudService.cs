@@ -16,14 +16,14 @@ namespace UHPYQ8_HFT_2021222.Client
         public void GameAVGPrice()
         {
             double price = rest.GetSingle<double>("Stat/GameAVGPrice");
-            Console.WriteLine($"Average game price = {price}");
+            Console.WriteLine($"Average game price = [{price}]");
             Console.WriteLine("Press [ENTER]");
             Console.ReadLine();
         }
         public void GameAVGRating()
         {
             double price = rest.GetSingle<double>("Stat/GameAVGRating");
-            Console.WriteLine($"Average game rating = {price}");
+            Console.WriteLine($"Average game rating = [{price}]");
             Console.WriteLine("Press [ENTER]");
             Console.ReadLine();
         }
@@ -34,7 +34,7 @@ namespace UHPYQ8_HFT_2021222.Client
             Console.WriteLine("Platform\tIncoming Money");
             foreach (var item in items)
             {
-                Console.WriteLine($"{item.Key} | {item.Value}");
+                Console.WriteLine($"[{item.Key}] \t [{item.Value}]");
             }
             Console.WriteLine("Press [ENTER]");
             Console.ReadLine();
@@ -46,7 +46,7 @@ namespace UHPYQ8_HFT_2021222.Client
             Console.WriteLine("Platform\tAvailable games (pieces)");
             foreach (var item in items)
             {
-                Console.WriteLine($"{item.Key} | {item.Value}");
+                Console.WriteLine($"[{item.Key}] \t [{item.Value}]");
             }
             Console.WriteLine("Press [ENTER]");
             Console.ReadLine();
@@ -58,7 +58,7 @@ namespace UHPYQ8_HFT_2021222.Client
             Console.WriteLine("Platform\tAverage Rating");
             foreach (var item in items)
             {
-                Console.WriteLine($"{item.Key} | {item.Value}");
+                Console.WriteLine($"[{item.Key}] \t [{item.Value}]");
             }
             Console.WriteLine("Press [ENTER]");
             Console.ReadLine();
@@ -70,7 +70,7 @@ namespace UHPYQ8_HFT_2021222.Client
             Console.WriteLine("Platform\tAverage Game's price");
             foreach (var item in items)
             {
-                Console.WriteLine($"{item.Key} | {item.Value}");
+                Console.WriteLine($"[{item.Key}] \t [{item.Value}]");
             }
             Console.WriteLine("Press [ENTER]");
             Console.ReadLine();
@@ -85,7 +85,7 @@ namespace UHPYQ8_HFT_2021222.Client
                 Console.WriteLine("Games at this platform:");
                 foreach (var item in items)
                 {
-                    Console.WriteLine(item.Title + " | " + item.Price + " Euro");
+                    Console.WriteLine("["+item.Title + "] \t [" + item.Price + "] Euro");
                 }
                 Console.WriteLine("Press [ENTER]");
                 Console.ReadLine();
