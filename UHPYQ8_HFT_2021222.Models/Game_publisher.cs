@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace UHPYQ8_HFT_2021222.Models
@@ -17,7 +18,7 @@ namespace UHPYQ8_HFT_2021222.Models
 
         public int GameId { get; set; }
         public int PublisherId { get; set; }
-
+        [JsonIgnore]
         public virtual Game Game { get; private set; }
         public virtual Publisher Publisher { get; private set; }
 
