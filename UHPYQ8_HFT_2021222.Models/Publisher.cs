@@ -19,7 +19,7 @@ namespace UHPYQ8_HFT_2021222.Models
         public string PublisherName { get; set; }
 
         public virtual ICollection<Game> Games { get; set; }
-
+        public virtual ICollection<Game_publisher> Game_publishers { get; set; }
         public Publisher()
         {
             
