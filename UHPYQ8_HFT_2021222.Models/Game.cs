@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace UHPYQ8_HFT_2021222.Models
 {
@@ -23,7 +24,7 @@ namespace UHPYQ8_HFT_2021222.Models
 
         public int PlatformId { get; set; }
         public virtual Platform Platform { get; set; }
-
+        [JsonIgnore]
         public virtual ICollection<Publisher> Publishers { get; set; }
         public virtual ICollection<Game_publisher> Game_publishers { get; set; }
 
