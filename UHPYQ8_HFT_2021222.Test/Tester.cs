@@ -225,5 +225,20 @@ namespace UHPYQ8_HFT_2021222.Test
             }
             mockGame_publisherRepo.Verify(r => r.Create(GP), Times.Never);
         }
+
+
+        //Noncurd 1. 
+        [Test]
+        public void AVGPriceByPlatformTest()
+        {
+            List<KeyValuePair<string, double>> ex = new List<KeyValuePair<string, double>>()
+            {
+                new KeyValuePair<string,double>("Steam",1),
+                new KeyValuePair<string,double>("XBOX",1)
+            };
+            var re = gameLogic.AVGPriceByPlatform().ToList();
+            Assert.AreEqual(ex, re);
+        }
+
     }
 }
