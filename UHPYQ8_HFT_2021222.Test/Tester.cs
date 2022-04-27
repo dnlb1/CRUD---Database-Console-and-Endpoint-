@@ -104,5 +104,13 @@ namespace UHPYQ8_HFT_2021222.Test
             game_PubliserLogic = new Game_publisherLogic(mockGame_publisherRepo.Object);
         }
 
+        //Free 1.
+        [Test]
+        public void GameAVGPriceTest()
+        {
+            var result = gameLogic.GameAVGPrice();
+            //(1 + 1 + 1)/3 = 1 
+            Assert.That(result, Is.EqualTo(1));
+        }
     }
 }
