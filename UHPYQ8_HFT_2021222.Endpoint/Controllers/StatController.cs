@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UHPYQ8_HFT_2021222.Logic.Classes;
 using UHPYQ8_HFT_2021222.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 
 namespace UHPYQ8_HFT_2021222.Endpoint.Controllers
 {
