@@ -85,7 +85,7 @@ namespace UHPYQ8_HFT_2021222.Client
                 Console.WriteLine("Games at this platform:");
                 foreach (var item in items)
                 {
-                    Console.WriteLine(item.Title + " | " + item.Price + "€");
+                    Console.WriteLine(item.Title + " | " + item.Price + " Euro");
                 }
                 Console.WriteLine("Press [ENTER]");
                 Console.ReadLine();
