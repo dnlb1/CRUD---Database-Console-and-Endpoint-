@@ -8,7 +8,7 @@ using UHPYQ8_HFT_2021222.Repository.Interface;
 
 namespace UHPYQ8_HFT_2021222.Logic.Classes
 {
-    public class PublisherLogic
+    public class PublisherLogic : IPublisherLogic
     {
         IRepository<Publisher> repo;
 
