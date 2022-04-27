@@ -163,5 +163,15 @@ namespace UHPYQ8_HFT_2021222.Test
             }
             mockPlatformRepo.Verify(r => r.Create(Pl), Times.Never);
         }
+
+        //4. Platform's Create method test
+        [Test]
+        public void CreatePlatformTestWithCorrectName()
+        {
+            Platform Pl = new Platform();
+            Pl.PlatformName = "Steam";
+            platformLogic.Create(Pl);
+            mockPlatformRepo.Verify(r => r.Create(Pl), Times.Once);
+        }
     }
 }
