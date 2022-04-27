@@ -265,5 +265,18 @@ namespace UHPYQ8_HFT_2021222.Test
             var re = gameLogic.GameCountByPlatform().ToList();
             Assert.AreEqual(ex, re);
         }
+
+        //Noncurd 4.
+        [Test]
+        public void PlatformICMoneyTest()
+        {
+            List<KeyValuePair<string, double>> ex = new List<KeyValuePair<string, double>>()
+            {
+                new KeyValuePair<string,double>("Steam",2),
+                new KeyValuePair<string,double>("XBOX",1)
+            };
+            var re = gameLogic.PlatformICMoney().ToList();
+            Assert.AreEqual(ex, re);
+        }
     }
 }
