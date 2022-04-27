@@ -189,5 +189,15 @@ namespace UHPYQ8_HFT_2021222.Test
             }
             mockPublisherRepo.Verify(r => r.Create(Pu), Times.Never);
         }
+
+        //6. Publisher's Create method test
+        [Test]
+        public void CreatePublisherTestWithCorrectName()
+        {
+            Publisher Pu = new Publisher();
+            Pu.PublisherName = "Mindegy_a_Nev";
+            publisherLogic.Create(Pu);
+            mockPublisherRepo.Verify(r => r.Create(Pu), Times.Once);
+        }
     }
 }
