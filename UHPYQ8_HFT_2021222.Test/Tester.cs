@@ -120,5 +120,22 @@ namespace UHPYQ8_HFT_2021222.Test
             var result = gameLogic.GameAVGRating();
             Assert.That(result, Is.EqualTo(3));
         }
+
+        //1. Game's Create method test with Exception
+        [Test]
+        public void CreateGameTestWithInCorrectTitle()
+        {
+            Game Gm = new Game();
+            Gm.Title = "1";
+            try
+            {
+                gameLogic.Create(Gm);
+            }
+            catch
+            {
+            }
+            mockGameRepo.Verify(r => r.Create(Gm), Times.Never);
+
+        }
     }
 }
