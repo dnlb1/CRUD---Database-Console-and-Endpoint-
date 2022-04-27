@@ -83,5 +83,9 @@ namespace UHPYQ8_HFT_2021222.Logic.Classes
         {
             return this.repo.ReadAll().Where(x => x.Platform.PlatformName.ToLower().Equals(PlatformName.ToLower()));
         }
+        public double GameAVGPrice()
+        {
+            return this.repo.ReadAll().Average(c => c.Price);
+        }
     }
 }
