@@ -173,5 +173,21 @@ namespace UHPYQ8_HFT_2021222.Test
             platformLogic.Create(Pl);
             mockPlatformRepo.Verify(r => r.Create(Pl), Times.Once);
         }
+
+        //5. Publisher's Create method test with Exception
+        [Test]
+        public void CreatePublisherTestWithInCorrectName()
+        {
+            Publisher Pu = new Publisher();
+            Pu.PublisherName = "";
+            try
+            {
+                publisherLogic.Create(Pu);
+            }
+            catch
+            {
+            }
+            mockPublisherRepo.Verify(r => r.Create(Pu), Times.Never);
+        }
     }
 }
