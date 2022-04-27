@@ -79,5 +79,9 @@ namespace UHPYQ8_HFT_2021222.Logic.Classes
                    select new KeyValuePair<string, double>
                   (g.Key, g.Sum(t => t.Price));
         }
+        public IEnumerable<Game> FindAllGameAtThisPlatform(string PlatformName)
+        {
+            return this.repo.ReadAll().Where(x => x.Platform.PlatformName.ToLower().Equals(PlatformName.ToLower()));
+        }
     }
 }
