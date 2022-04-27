@@ -199,5 +199,15 @@ namespace UHPYQ8_HFT_2021222.Test
             publisherLogic.Create(Pu);
             mockPublisherRepo.Verify(r => r.Create(Pu), Times.Once);
         }
+
+        //7. Game_Publisher's Create method test Exception
+        [Test]
+        public void CreateGame_PublisherTestWithCorrectName()
+        {
+            Game_publisher GP = new Game_publisher();
+            GP.release_year = 2000;
+            game_PubliserLogic.Create(GP);
+            mockGame_publisherRepo.Verify(r => r.Create(GP), Times.Once);
+        }
     }
 }
