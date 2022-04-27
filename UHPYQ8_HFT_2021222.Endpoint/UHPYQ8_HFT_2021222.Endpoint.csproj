@@ -9,5 +9,9 @@
     <ProjectReference Include="..\UHPYQ8_HFT_2021222.Models\UHPYQ8_HFT_2021222.Models.csproj" />
     <ProjectReference Include="..\UHPYQ8_HFT_2021222.Repository\UHPYQ8_HFT_2021222.Repository.csproj" />
   </ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
 
 </Project>
