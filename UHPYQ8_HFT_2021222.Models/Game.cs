@@ -25,6 +25,7 @@ namespace UHPYQ8_HFT_2021222.Models
         public virtual Platform Platform { get; set; }
 
         public virtual ICollection<Publisher> Publishers { get; set; }
+        public virtual ICollection<Game_publisher> Game_publishers { get; set; }
 
         public Game()
         {
