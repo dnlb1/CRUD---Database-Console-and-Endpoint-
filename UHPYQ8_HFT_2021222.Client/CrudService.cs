@@ -45,7 +45,7 @@ namespace UHPYQ8_HFT_2021222.Client
 
             foreach (var property in properties)
             {
-                Console.Write($"{property.Name}\t");
+                Console.Write($"{property.Name}\t\t");
             }
             Console.Write("\n");
 
@@ -53,7 +53,7 @@ namespace UHPYQ8_HFT_2021222.Client
             {
                 foreach (var property in properties)
                 {
-                    Console.Write($"{property.GetValue(item)}\t");
+                    Console.Write($"{property.GetValue(item)}\t\t");
                 }
                 Console.Write("\n");
             }
