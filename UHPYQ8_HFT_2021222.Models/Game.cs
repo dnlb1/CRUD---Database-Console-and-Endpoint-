@@ -43,5 +43,14 @@ namespace UHPYQ8_HFT_2021222.Models
             PlatformId = int.Parse(split[4]);
         }
 
+        public override bool Equals(object obj)
+        {
+            return (obj as Game).GetHashCode() == this.GetHashCode();
+        }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(GameId.GetHashCode(), Title.GetHashCode(), Price.GetHashCode(), Rating.GetHashCode());
+        }
+
     }
 }
