@@ -240,5 +240,17 @@ namespace UHPYQ8_HFT_2021222.Test
             Assert.AreEqual(ex, re);
         }
 
+        //Noncurd 2.
+        [Test]
+        public void AVGRatingByPlatformTest()
+        {
+            List<KeyValuePair<string, double>> ex = new List<KeyValuePair<string, double>>()
+            {
+                new KeyValuePair<string,double>("Steam",3),
+                new KeyValuePair<string,double>("XBOX",3)
+            };
+            var re = gameLogic.AVGRatingByPlatform().ToList();
+            Assert.AreEqual(ex, re);
+        }
     }
 }
