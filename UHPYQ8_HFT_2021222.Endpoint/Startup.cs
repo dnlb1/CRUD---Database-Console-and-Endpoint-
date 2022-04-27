@@ -47,7 +47,7 @@ namespace UHPYQ8_HFT_2021222.Endpoint
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "UHPYQ8_HFT_2021222.Endpoint", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Welcome! This is my GAME adatbase", Version = "v1" });
             });
         }
 
@@ -57,7 +57,7 @@ namespace UHPYQ8_HFT_2021222.Endpoint
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UHPYQ8_HFT_2021222.Endpoint v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Welcome! This is my GAME adatbase v1"));
             }
 
             app.UseExceptionHandler(c => c.Run(async context =>
