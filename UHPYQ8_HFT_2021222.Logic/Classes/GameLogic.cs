@@ -50,5 +50,13 @@ namespace UHPYQ8_HFT_2021222.Logic.Classes
         {
             this.repo.Update(item);
         }
+
+        public IEnumerable<KeyValuePair<string, double>> AVGPriceByPlatform()
+        {
+            return from x in this.repo.ReadAll()
+                   group x by x.Platform.PlatformName into g
+                   select new KeyValuePair<string, double>
+                  (g.Key, g.Average(t => t.Price));
+        }
     }
 }
