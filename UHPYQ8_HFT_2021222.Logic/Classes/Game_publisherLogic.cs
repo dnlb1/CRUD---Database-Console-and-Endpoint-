@@ -8,7 +8,7 @@ using UHPYQ8_HFT_2021222.Repository.Interface;
 
 namespace UHPYQ8_HFT_2021222.Logic.Classes
 {
-    public class Game_publisherLogic
+    public class Game_publisherLogic : IGame_publisherLogic
     {
         IRepository<Game_publisher> repo;
 
