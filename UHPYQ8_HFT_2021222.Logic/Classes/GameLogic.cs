@@ -87,5 +87,9 @@ namespace UHPYQ8_HFT_2021222.Logic.Classes
         {
             return this.repo.ReadAll().Average(c => c.Price);
         }
+        public double GameAVGRating()
+        {
+            return this.repo.ReadAll().Average(c => c.Rating);
+        }
     }
 }
