@@ -137,5 +137,15 @@ namespace UHPYQ8_HFT_2021222.Test
             mockGameRepo.Verify(r => r.Create(Gm), Times.Never);
 
         }
+
+        //2. Game's Create method test.
+        [Test]
+        public void CreateGameTestWithCorrectTitle()
+        {
+            Game Gm = new Game();
+            Gm.Title = "Age of Empire IV";
+            gameLogic.Create(Gm);
+            mockGameRepo.Verify(r => r.Create(Gm), Times.Once);
+        }
     }
 }
