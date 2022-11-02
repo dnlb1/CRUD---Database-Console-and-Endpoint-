@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Game UI</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="maindivs">
+        <h1>Game Catalog</h1>
+        <div id="formdivgame">
+            <label>Game Title</label>
+            <input type="text" id="gametitle" />
+            <label>Game Price</label>
+            <input type="text" id="pricegame" />
+            <label>Game Platform</label>
+            <input type="text" id="platformidgame" />
+            <button type="button" onclick="creategame()">Add Game</button>
+        </div>
+        <div id="updateformdivgame">
+            <label>Game Title</label>
+            <input type="text" id="gametitletoupdate" />
+            <label>Game Price</label>
+            <input type="text" id="pricegametoupdate" />
+            <label>Game Platform</label>
+            <input type="text" id="platformidgametoupdate" />
+            <button type="button" onclick="updategame()">Update Game</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Platform</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="resultareagame">
+            </tbody>
+        </table>
+    </div>
+    <div id="maindivs">
+        <h1>Publisher Catalog</h1>
+
+        <div id="formdiv">
+            <label>Publisher Name</label>
+            <input type="text" id="publishername" />
+            <button type="button" onclick="create()">Add Publisher</button>
+        </div>
+
+        <div id="updateformdiv">
+            <label>Publisher Name</label>
+            <input type="text" id="publishernametoupdate" />
+            <button type="button" onclick="update()">Update Publisher</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="resultarea">
+            </tbody>
+        </table>
+    </div>
+    <div id="maindivs">
+        <h1>Platform Catalog</h1>
+
+        <div id="formdivplatform">
+            <label>Platform Name</label>
+            <input type="text" id="platformname" />
+            <button type="button" onclick="createplatform()">Add Platform</button>
+        </div>
+
+        <div id="updateformdivplatform">
+            <label>Platform Name</label>
+            <input type="text" id="platformnametoupdate" />
+            <button type="button" onclick="updateplatform()">Update Platform</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="resultareaplatform">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

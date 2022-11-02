@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UHPYQ8_HFT_2021222.Endpoint.Services;
 using UHPYQ8_HFT_2021222.Logic.Classes;
 using UHPYQ8_HFT_2021222.Models;
 using UHPYQ8_HFT_2021222.Repository;
@@ -43,11 +44,11 @@ namespace UHPYQ8_HFT_2021222.Endpoint
             services.AddTransient<IPlatformLogic, PlatformLogic>();
             services.AddTransient<IPublisherLogic, PublisherLogic>();
 
-
+            services.AddSignalR();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Welcome! This is my GAME adatbase", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GameSite", Version = "v1" });
             });
         }
 
@@ -57,7 +58,7 @@ namespace UHPYQ8_HFT_2021222.Endpoint
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Welcome! This is my GAME adatbase v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GameSite"));
             }
 
             app.UseExceptionHandler(c => c.Run(async context =>
@@ -67,6 +68,12 @@ namespace UHPYQ8_HFT_2021222.Endpoint
                 await context.Response.WriteAsJsonAsync(response);
             }));
 
+            app.UseCors(x => x
+            .AllowCredentials()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .WithOrigins("http://localhost:3734"));
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -74,6 +81,7 @@ namespace UHPYQ8_HFT_2021222.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }

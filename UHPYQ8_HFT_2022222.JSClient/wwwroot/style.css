@@ -1,0 +1,124 @@
+﻿/*All*/
+#maindivs {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 5px solid #969692;
+    background: #e1cfcf;
+    margin: 10px;
+}
+table{
+    width: 100%;
+    margin: 10px;
+}
+h1,h3{
+    margin: 10px;
+}
+table, th,td{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+}
+th, td{
+    padding: 5px;
+}
+th{
+    background-color:lightblue
+}
+
+/*Publisher*/
+#formdiv{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:20px;
+}
+#formdiv label, button, input{
+    margin: 10px;
+    padding: 7px;
+}
+#formdiv label{
+    font-weight: bolder;
+}
+table button{
+    padding: 2px;
+}
+#updateformdiv {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+#updateformdiv label, button, input {
+        margin: 10px;
+        padding: 7px;
+    }
+#updateformdiv label {
+        font-weight: bolder;
+
+}
+#resultarea {
+    background-color: #edeaea;
+}
+/*/Game/*/
+#formdivgame {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+#formdivgame label, button, input {
+    margin: 10px;
+    padding: 7px;
+}
+#formdivgame label {
+    font-weight: bolder;
+}
+#updateformdivgame {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+#updateformdivgame label, button, input {
+        margin: 10px;
+        padding: 7px;
+}
+#updateformdivgame label {
+        font-weight: bolder;
+}
+#resultareagame {
+    background-color: #edeaea;
+}
+
+/*Platform*/
+#formdivplatform {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+    #formdivplatform label, button, input {
+        margin: 10px;
+        padding: 7px;
+    }
+
+    #formdivplatform label {
+        font-weight: bolder;
+    }
+
+#updateformdivplatform {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+    #updateformdivplatform label, button, input {
+        margin: 10px;
+        padding: 7px;
+    }
+
+    #updateformdivplatform label {
+        font-weight: bolder;
+    }
+
+#resultareaplatform {
+    background-color: #edeaea;
+}
